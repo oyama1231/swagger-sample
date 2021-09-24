@@ -39,6 +39,19 @@ paths:
           name: body
           schema:
             $ref: '#/definitions/movie'
+    delete:
+      summary: 映画情報削除
+      operationId: delete-movies-id
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              result:
+                type: string
+                description: 処理結果
+      description: 指定した映画情報を削除する
   /movie/:
     parameters: []
     post:
